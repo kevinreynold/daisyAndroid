@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/moment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:paddingBottom="5dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:id="@+id/headerMoment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Round image -->
+            <ImageView
+                android:id="@+id/dpMoment"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/namaMoment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Ricky Wirawan" />
+
+                <TextView
+                    android:id="@+id/isiMoment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Saya Membaca buku" />
+
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/ic_add"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/komentar1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/headerMoment"
+            android:layout_marginLeft="40dp">
+
+            <!-- Round image -->
+            <ImageView
+                android:id="@+id/dpkomen1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/namaKomen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Ricky Wirawan" />
+
+                <TextView
+                    android:id="@+id/komen1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Saya Juga Membaca buku" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/komentar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/komentar1"
+            android:layout_marginLeft="40dp">
+
+            <!-- Round image -->
+            <ImageView
+                android:id="@+id/dpkomen2"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/profile"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/namaKomen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Ricky Wirawan" />
+
+                <TextView
+                    android:id="@+id/komen2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Saya Juga Membaca buku" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
