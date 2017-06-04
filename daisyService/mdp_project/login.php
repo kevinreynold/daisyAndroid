@@ -7,7 +7,7 @@
         $result = mysqli_query($conn, $sql);
 
         $row = mysqli_fetch_array($result);
-        $id_user = $row[0][0];
+        $id_user = $row[0];
 
         if (mysqli_num_rows($result) > 0) {
             echo "login_success-".$id_user;

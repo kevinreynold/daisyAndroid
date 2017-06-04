@@ -166,12 +166,12 @@
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:text="Button"
-        tools:text="Logout"
-        android:layout_marginTop="15dp"
+        android:layout_alignParentEnd="true"
         android:layout_below="@+id/scrollView2"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="15dp"
+        android:text="Logout"
+        tools:text="Logout" />
 
 
 </RelativeLayout>
