@@ -13,46 +13,55 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/banner"
                 android:layout_marginTop="50dp"
-                />
+                android:background="@drawable/banner" />
 
             <EditText
+                android:id="@+id/tbUserLogin"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/textborder"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 android:hint="Email"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
 
             <EditText
+                android:id="@+id/tbPassLogin"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/textborder"
                 android:hint="Password"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 android:inputType="textPassword"
-                />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="60dp"
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                />
+                android:text="Sign In" />
+
+            <Button
+                android:id="@+id/btnToRegister"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Sign Up" />
 
         </LinearLayout>
 

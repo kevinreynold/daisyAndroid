@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -12,83 +13,82 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageView
                 android:layout_width="200dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/banner"
                 android:layout_marginTop="50dp"
-                />
+                android:background="@drawable/banner" />
 
             <EditText
+                android:id="@+id/tbUserRegister"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/textborder"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:hint="Email"
-                android:inputType="textEmailAddress"
-                android:textAlignment="center" />
-
-
-            <EditText
-                android:layout_width="200dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/textborder"
                 android:hint="Full Name"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
+                android:inputType="text"
                 android:textAlignment="center"
-                />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
 
             <EditText
+                android:id="@+id/tbEmailRegister"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textborder"
+                android:hint="Email"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+
+            <EditText
+                android:id="@+id/tbPassRegister"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/textborder"
                 android:hint="Password"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:textColorHint="@color/white"
                 android:inputType="textPassword"
-                />
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
             <EditText
+                android:id="@+id/tbCPassRegister"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/textborder"
                 android:hint="Confirm Password"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
                 android:inputType="textPassword"
                 android:textAlignment="center"
-                />
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
 
-
-
-            <ImageButton
-                android:layout_width="150dp"
-                android:layout_height="60dp"
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                />
+                android:text="Sign Up" />
+
 
         </LinearLayout>
 
     </ScrollView>
-
-
-
-
 
 
 </LinearLayout>

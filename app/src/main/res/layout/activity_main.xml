@@ -80,7 +80,8 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         android:padding="5dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -160,6 +161,16 @@
 
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:layout_marginEnd="14dp"
+        android:text="Button"
+        tools:text="Logout"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
