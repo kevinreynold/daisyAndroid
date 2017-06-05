@@ -1,5 +1,6 @@
 package com.example.ricky.daisymdp;
 
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,7 @@ public class HomeActivity extends AppCompatActivity {
 
         if(MainActivity.session.checkLogin()) finish();
 
+        new ProfileDetails().execute();
         btnLogout = (Button) findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -22,5 +24,25 @@ public class HomeActivity extends AppCompatActivity {
                 MainActivity.session.logoutUser();
             }
         });
+    }
+
+    public class ProfileDetails extends AsyncTask<Void,Void,Void>{
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            int id = Integer.parseInt(MainActivity.session.getUserDetails().get("user_id"));
+            String path = "http://" + UserSessionManager.host + "/mdp_project/profile.php?userid=" + String.valueOf(id);
+            JSONParser.getJSONFromUrl(path);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+        }
     }
 }
