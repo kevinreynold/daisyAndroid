@@ -11,20 +11,21 @@ public abstract class Moment {
     protected String description;
     protected String tanggal;
     protected String waktu;
-    protected int like_count;
-    protected int comment_count;
     protected ArrayList<Comment> comments = new ArrayList<>();
     protected ArrayList<Like> likes = new ArrayList<>();
 
-    public Moment(int id, String description, String tanggal, String waktu, int like_count, int comment_count, ArrayList<Comment> comments, ArrayList<Like> likes) {
+    public Moment(int id, String description, String tanggal, String waktu, ArrayList<Comment> comments, ArrayList<Like> likes) {
         this.id = id;
         this.description = description;
         this.tanggal = tanggal;
         this.waktu = waktu;
-        this.like_count = like_count;
-        this.comment_count = comment_count;
         this.comments = comments;
         this.likes = likes;
+    }
+
+    @Override
+    public String toString() {
+        return this.id + " - " + this.description;
     }
 
     public int getId() {
@@ -59,22 +60,6 @@ public abstract class Moment {
         this.waktu = waktu;
     }
 
-    public int getLike_count() {
-        return like_count;
-    }
-
-    public void setLike_count(int like_count) {
-        this.like_count = like_count;
-    }
-
-    public int getComment_count() {
-        return comment_count;
-    }
-
-    public void setComment_count(int comment_count) {
-        this.comment_count = comment_count;
-    }
-
     public ArrayList<Comment> getComments() {
         return comments;
     }
@@ -93,34 +78,34 @@ public abstract class Moment {
 }
 
 class CommonMoment extends Moment{
-    public CommonMoment(int id, String description, String tanggal, String waktu, int like_count, int comment_count, ArrayList<Comment> comments, ArrayList<Like> likes) {
-        super(id, description, tanggal, waktu, like_count, comment_count, comments, likes);
+    public CommonMoment(int id, String description, String tanggal, String waktu, ArrayList<Comment> comments, ArrayList<Like> likes) {
+        super(id, description, tanggal, waktu, comments, likes);
     }
 }
 
 class LocationMoment extends Moment{
-    protected double longitude;
-    protected double lattitude;
+    protected String longitude;
+    protected String lattitude;
 
-    public LocationMoment(int id, String description, String tanggal, String waktu, int like_count, int comment_count, ArrayList<Comment> comments, ArrayList<Like> likes, double longitude, double lattitude) {
-        super(id, description, tanggal, waktu, like_count, comment_count, comments, likes);
+    public LocationMoment(int id, String description, String tanggal, String waktu, ArrayList<Comment> comments, ArrayList<Like> likes, String longitude, String lattitude) {
+        super(id, description, tanggal, waktu, comments, likes);
         this.longitude = longitude;
         this.lattitude = lattitude;
     }
 
-    public double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
-    public double getLattitude() {
+    public String getLattitude() {
         return lattitude;
     }
 
-    public void setLattitude(double lattitude) {
+    public void setLattitude(String lattitude) {
         this.lattitude = lattitude;
     }
 }
@@ -128,8 +113,8 @@ class LocationMoment extends Moment{
 class MediaMoment extends Moment{
     protected String media_url;
 
-    public MediaMoment(int id, String description, String tanggal, String waktu, int like_count, int comment_count, ArrayList<Comment> comments, ArrayList<Like> likes, String media_url) {
-        super(id, description, tanggal, waktu, like_count, comment_count, comments, likes);
+    public MediaMoment(int id, String description, String tanggal, String waktu, ArrayList<Comment> comments, ArrayList<Like> likes, String media_url) {
+        super(id, description, tanggal, waktu, comments, likes);
         this.media_url = media_url;
     }
 

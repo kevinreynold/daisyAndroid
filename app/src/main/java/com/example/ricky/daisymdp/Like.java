@@ -5,24 +5,24 @@ package com.example.ricky.daisymdp;
  */
 
 public class Like {
-    private int id;
+    private int id_user;
     private String nama_user;
     private String tanggal;
     private String waktu;
 
-    public Like(int id, String nama_user, String tanggal, String waktu) {
-        this.id = id;
+    public Like(int id_user, String nama_user, String tanggal, String waktu) {
+        this.id_user = id_user;
         this.nama_user = nama_user;
         this.tanggal = tanggal;
         this.waktu = waktu;
     }
 
-    public int getId() {
-        return id;
+    public int getId_user() {
+        return id_user;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
 
     public String getNama_user() {

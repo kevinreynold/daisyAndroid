@@ -1,0 +1,14 @@
+1. login (POST) -- DONE
+2. register (POST) -- DONE
+3. profile (GET->JSON) -- DONE
+5. list_friend(GET->JSON) -- DONE
+4. follow (POST) -- DONE
+5. setting (POST) -- NANTI
+6. moment (POST) -- DONE
+7. comment (POST) -- DONE
+8. like/unlike (POST ) -- DONE
+9. timeline (GET->JSON) -- 
+
+OPSIONAL
+delete moment
+delete comment

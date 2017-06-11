@@ -11,7 +11,7 @@
         }
         else{
             $sql_insert = "INSERT INTO user VALUES('','$username','$email','$password','default','1')";
-            if (mysqli_query($conn, $sql_insert) == true) {
+            if (mysqli_query($conn, $sql_insert)) {
                 echo "register_success";
             }
             else {

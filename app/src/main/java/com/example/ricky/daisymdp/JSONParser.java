@@ -44,11 +44,12 @@ public class JSONParser {
                 builder.append(inputString);
             }
             Log.e("Hasil JSON",builder.toString());
-            JSONObject jObj = new JSONObject(builder.toString());
-
+            jObj = new JSONObject(builder.toString());
             urlConnection.disconnect();
+            Log.e("JSON Parsing","Success");
         } catch (IOException | JSONException e) {
             e.printStackTrace();
+            Log.e("JSON Parsing","Failed");
         }
 
         // return JSON String
