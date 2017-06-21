@@ -23,6 +23,11 @@ public abstract class Moment {
         this.likes = likes;
     }
 
+    @Override
+    public String toString() {
+        return this.id + " - " + this.description;
+    }
+
     public int getId() {
         return id;
     }

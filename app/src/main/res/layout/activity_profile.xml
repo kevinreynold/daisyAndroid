@@ -35,20 +35,13 @@
                     android:layout_gravity="center"/>
 
                 <TextView
+                    android:id="@+id/tbNameProfile"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ricky Wirawan"
-                    android:textSize="22dp"
-                    android:textColor="@color/title_color"
-                    android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Syracuse, New York"
                     android:layout_gravity="center"
+                    android:text="Ricky Wirawan"
                     android:textColor="@color/title_color"
-                    android:textSize="14dp"/>
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
@@ -71,13 +64,15 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:layout_marginTop="10dp">
+
                     <TextView
+                        android:id="@+id/tbMomentsCountProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="256"
                         android:textColor="@color/title_color"
-                        android:textStyle="bold"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -96,13 +91,15 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:layout_marginTop="10dp">
+
                     <TextView
+                        android:id="@+id/tbFollowingCountProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2,080"
                         android:textColor="@color/title_color"
-                        android:textStyle="bold"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView"
@@ -121,13 +118,15 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:layout_marginTop="10dp">
+
                     <TextView
+                        android:id="@+id/tbFollowerCountProfile"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="2,080"
                         android:textColor="@color/title_color"
-                        android:textStyle="bold"
-                        android:textSize="18dp" />
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -183,12 +182,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabHome"
+                android:id="@+id/tabHomeProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_home"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_home" />
         </LinearLayout>
 
 
@@ -198,12 +197,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabFriend"
+                android:id="@+id/tabFriendProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_friend"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_friend" />
         </LinearLayout>
 
 
@@ -214,12 +213,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabAdd"
+                android:id="@+id/tabAddProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_add"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_add" />
         </LinearLayout>
 
         <LinearLayout
@@ -229,12 +228,12 @@
 
 
             <ImageView
-                android:id="@+id/tabNotif"
+                android:id="@+id/tabNotifProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_notif"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_notif" />
         </LinearLayout>
 
 
@@ -244,12 +243,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabMoment"
+                android:id="@+id/tabMomentProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_moment"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_moment" />
 
         </LinearLayout>
 

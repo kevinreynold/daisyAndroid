@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2017 at 08:46 PM
+-- Generation Time: Jun 04, 2017 at 02:19 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -38,10 +38,7 @@ CREATE TABLE `d_like_moment` (
 --
 
 INSERT INTO `d_like_moment` (`id_moment`, `id_user`, `tanggal`, `waktu`) VALUES
-(2, 1, '2017-06-07', '09:56:26'),
-(2, 3, '2017-06-07', '09:56:24'),
-(2, 4, '2017-06-07', '09:56:21'),
-(3, 1, '2017-06-07', '09:50:00');
+(2, 1, '2017-06-08', '23:00:00');
 
 -- --------------------------------------------------------
 
@@ -51,18 +48,9 @@ INSERT INTO `d_like_moment` (`id_moment`, `id_user`, `tanggal`, `waktu`) VALUES
 
 CREATE TABLE `friend` (
   `id_user1` int(50) NOT NULL,
-  `id_user2` int(50) NOT NULL
+  `id_user2` int(50) NOT NULL,
+  `status_accept` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `friend`
---
-
-INSERT INTO `friend` (`id_user1`, `id_user2`) VALUES
-(1, 2),
-(1, 4),
-(2, 1),
-(4, 1);
 
 -- --------------------------------------------------------
 
@@ -86,9 +74,7 @@ CREATE TABLE `h_comment` (
 INSERT INTO `h_comment` (`id_comment`, `tanggal`, `waktu`, `message`, `id_moment`, `id_user`) VALUES
 (1, '2017-06-08', '08:14:15', 'Mantap', 2, 2),
 (2, '2017-06-08', '15:12:33', 'Gila wkakaka', 2, 1),
-(3, '2017-06-14', '05:00:00', '...', 1, 2),
-(4, '2017-06-07', '12:19:02', 'Hello', 1, 1),
-(5, '2017-06-07', '12:19:22', 'Nik', 2, 3);
+(3, '2017-06-14', '05:00:00', '...', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -101,6 +87,8 @@ CREATE TABLE `h_moment` (
   `description` varchar(144) NOT NULL,
   `tanggal` date NOT NULL,
   `waktu` time NOT NULL,
+  `like_count` int(5) NOT NULL,
+  `comment_count` int(5) NOT NULL,
   `id_user` int(50) NOT NULL,
   `media_url` varchar(75) DEFAULT NULL,
   `longitude` varchar(50) DEFAULT NULL,
@@ -111,11 +99,10 @@ CREATE TABLE `h_moment` (
 -- Dumping data for table `h_moment`
 --
 
-INSERT INTO `h_moment` (`id_moment`, `description`, `tanggal`, `waktu`, `id_user`, `media_url`, `longitude`, `latitude`) VALUES
-(1, 'Halo Semua', '2017-06-04', '18:20:00', 1, NULL, NULL, NULL),
-(2, 'Bosan dirumah :(', '2017-06-05', '21:10:30', 1, NULL, '-7.31313', '112.76408'),
-(3, 'Ayo mainn!!', '2017-06-05', '12:05:11', 1, NULL, NULL, NULL),
-(4, 'met malam', '2017-06-07', '04:24:38', 2, NULL, NULL, NULL);
+INSERT INTO `h_moment` (`id_moment`, `description`, `tanggal`, `waktu`, `like_count`, `comment_count`, `id_user`, `media_url`, `longitude`, `latitude`) VALUES
+(1, 'Halo Semua', '2017-06-04', '18:20:00', 0, 0, 1, NULL, NULL, NULL),
+(2, 'Bosan dirumah :(', '2017-06-05', '21:10:30', 0, 0, 1, NULL, '-7.31313', '112.76408'),
+(3, 'Ayo mainn!!', '2017-06-05', '12:05:11', 0, 0, 1, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -138,9 +125,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `nama_user`, `email`, `password`, `profile_foto_url`, `status`) VALUES
 (1, 'Reynold Kevin', 'reynoldkevin@gmail.com', '1234', 'default', '1'),
-(2, 'Budi', 'budibudi@gmail.com', '1234', 'default', '1'),
-(3, 'Ricky Wirawan', 'rickywrwn@gmail.com', 'riki1111', 'default', '1'),
-(4, 'Steven Christian', 'stevencr@gmail.com', 'steven', 'default', '1');
+(2, 'Budi', 'budibudi@gmail.com', '1234', 'default', '1');
 
 --
 -- Indexes for dumped tables
@@ -184,7 +169,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `h_comment`
 --
 ALTER TABLE `h_comment`
-  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_comment` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `h_moment`
 --
@@ -194,7 +179,7 @@ ALTER TABLE `h_moment`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

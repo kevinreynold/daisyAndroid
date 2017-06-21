@@ -60,6 +60,7 @@ public class User {
                     String username_follower = temp.getString("nama_user");
                     this.follower.add(new User(id_follower,username_follower));
                 }
+<<<<<<< HEAD
 
                 //moment
                 JSONArray json_moments = json_response.getJSONArray("moment");
@@ -118,6 +119,66 @@ public class User {
                     friend_suggestion.add(new User(id,nama_user));
                 }
 
+=======
+
+                //moment
+                JSONArray json_moments = json_response.getJSONArray("moment");
+                for (int i=0; i<json_moments.length(); i++){
+                    JSONObject json_moment = json_moments.getJSONObject(i);
+                    int id_moment = json_moment.getInt("id");
+                    String description_moment = json_moment.getString("description");
+                    String tanggal_moment = json_moment.getString("tanggal");
+                    String waktu_moment = json_moment.getString("waktu");
+                    String media_url_moment = (json_moment.getString("media_url").equals("null"))? json_moment.getString("media_url") : null;
+                    String longitude_moment = (json_moment.getString("longitude").equals("null"))? json_moment.getString("longitude") : null;
+                    String latitude_moment = (json_moment.getString("latitude").equals("null"))? json_moment.getString("latitude") : null;
+
+                    //comment
+                    ArrayList<Comment> comments_moment = new ArrayList<>();
+                    JSONArray json_comment_array = json_moment.getJSONArray("comment");
+                    for (int j=0; j<json_comment_array.length(); j++){
+                        JSONObject json_comment = json_comment_array.getJSONObject(j);
+                        int id_comment = json_comment.getInt("id");
+                        String tanggal_comment = json_comment.getString("tanggal");
+                        String waktu_comment = json_comment.getString("waktu");
+                        String message_comment = json_comment.getString("message");
+                        String nama_user_comment = json_comment.getString("nama_user");
+                        comments_moment.add(new Comment(id_comment,tanggal_comment,waktu_comment,message_comment,nama_user_comment));
+                    }
+
+                    //like
+                    ArrayList<Like> likes_moment = new ArrayList<>();
+                    JSONArray json_like_array = json_moment.getJSONArray("like");
+                    for (int j=0; j<json_like_array.length(); j++){
+                        JSONObject json_like = json_like_array.getJSONObject(j);
+                        int id_user_like = json_like.getInt("id");
+                        String nama_user_like = json_like.getString("nama");
+                        String tanggal_like = json_like.getString("tanggal");
+                        String waktu_like = json_like.getString("waktu");
+                        likes_moment.add(new Like(id_user_like,nama_user_like,tanggal_like,waktu_like));
+                    }
+
+                    if (media_url_moment==null && latitude_moment==null && longitude_moment==null){
+                        moments.add(new CommonMoment(id_moment, description_moment, tanggal_moment, waktu_moment, comments_moment, likes_moment));
+                    }
+                    else if(media_url_moment!=null){
+                        moments.add(new MediaMoment(id_moment, description_moment, tanggal_moment, waktu_moment, comments_moment, likes_moment, media_url_moment));
+                    }
+                    else if(latitude_moment!=null && longitude_moment!=null){
+                        moments.add(new LocationMoment(id_moment, description_moment, tanggal_moment, waktu_moment, comments_moment, likes_moment, longitude_moment, latitude_moment));
+                    }
+                }
+
+                //friend_suggestion
+                JSONArray json_friend_suggestion_array = json_response.getJSONArray("friend_suggestion");
+                for (int i=0; i<json_friend_suggestion_array.length(); i++){
+                    JSONObject json_friend_suggestion = json_friend_suggestion_array.getJSONObject(i);
+                    int id = json_friend_suggestion.getInt("id");
+                    String nama_user = json_friend_suggestion.getString("nama_user");
+                    friend_suggestion.add(new User(id,nama_user));
+                }
+
+>>>>>>> 71c873588e97ac3dd28e69e06b89b7cd809d83ac
                 Log.e("JSON-User","Success");
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -134,6 +195,16 @@ public class User {
         return follower.size();
     }
 
+<<<<<<< HEAD
+=======
+    public int momentCount(){
+        for (int i=0; i<moments.size(); i++){
+            Log.e("Moment -",moments.get(i).toString());
+        }
+        return moments.size();
+    }
+
+>>>>>>> 71c873588e97ac3dd28e69e06b89b7cd809d83ac
     public int getId() {
         return id;
     }

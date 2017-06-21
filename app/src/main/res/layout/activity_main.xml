@@ -91,12 +91,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabHome"
+                android:id="@+id/tabHomeMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_home"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_home" />
         </LinearLayout>
 
 
@@ -106,12 +106,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabFriend"
+                android:id="@+id/tabFriendMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_friend"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_friend" />
         </LinearLayout>
 
 
@@ -122,12 +122,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabAdd"
+                android:id="@+id/tabAddMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_add"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_add" />
         </LinearLayout>
 
         <LinearLayout
@@ -137,12 +137,12 @@
 
 
             <ImageView
-                android:id="@+id/tabNotif"
+                android:id="@+id/tabNotifMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_notif"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_notif" />
         </LinearLayout>
 
 
@@ -152,12 +152,12 @@
             android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/tabMoment"
+                android:id="@+id/tabMomentMain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_moment"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_moment" />
 
         </LinearLayout>
 
